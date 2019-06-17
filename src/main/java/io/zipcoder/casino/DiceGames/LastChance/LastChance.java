@@ -43,6 +43,7 @@ public abstract class LastChance extends DiceGame implements GamblingGame{
     BasePlayer player;
 
 
+
     public void initGame(){
         // Resets bet, rolls, diceRemaining, pot, and multiplier each game
         bet = 0;
@@ -105,7 +106,6 @@ public abstract class LastChance extends DiceGame implements GamblingGame{
     public void setPlayer(LastChancePlayer player) { this.player = player; }
 
 
-
     public void setupGame(Integer iBet,Integer iMultiplier){
         //Run check that iBet <= wallet && 2 < iMultiplier <7
         while(player.removeFromWallet(iBet) == false) { //Call the players wallet, not the class's wallet
@@ -130,7 +130,7 @@ public abstract class LastChance extends DiceGame implements GamblingGame{
                 "\t\n" +
                 "\tEnter 'roll' to roll the dice or 'lobby' to forfiet your bet.\n");
         // why can't I use name, and wallet from BasePlayer.basePlayer?
-//                , name, wallet, pot, dealerDice, playerDice, heldDice, rolls);
+//               , name, wallet, pot, dealerDice, playerDice, heldDice, rolls);
         Dice.setNumOfDice(5 - heldDice.size()); //sets Integer numOfDice to what hasn't been held yet
         Dice.roll(numOfDice); //sets Integer[] playerDice
         rolls--;

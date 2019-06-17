@@ -14,9 +14,9 @@ public class LastChancePlayer extends BasePlayer {
 
     private List<Dice> bin;
 
-    public LastChancePlayer(String name, List<Dice> bin) {
+    public LastChancePlayer(String name) { //List<Dice> bin
         super(name);
-        this.bin = bin;
+       // this.bin = bin;
     }
 
     public void dealerRoll(){
